@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  chat199:
+    build: .
+    container_name: hospital-199-chatbot
+    ports:
+      - "5173:5173"  # Frontend
+      - "3001:3001"  # Backend API
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Optional: If you want to develop with docker-compose
+  # Uncomment and use: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
