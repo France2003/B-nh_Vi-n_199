@@ -1,0 +1,45 @@
+:root {
+  --hospital-blue: #1e5b8d;
+  --hospital-light: #f0f4f8;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Hiệu ứng hình nền bệnh viện mờ ảo ở giữa khung chat */
+.hospital-watermark {
+  position: relative;
+}
+
+.hospital-watermark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  background-image: url('https://benhvien199.vn/uploads/logo/logo.png'); /* Có thể thay bằng ảnh tòa nhà BV 199 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.05; /* Rất mờ để giữ sự sang trọng */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Tùy chỉnh thanh cuộn siêu mỏng */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}

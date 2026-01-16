@@ -1,0 +1,48 @@
+
+.hospital-chat-pattern {
+  background-color: #f0f4f8;
+  background-image:  radial-gradient(#1e5b8d 0.5px, transparent 0.5px), radial-gradient(#1e5b8d 0.5px, #f0f4f8 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0,10px 10px;
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hospital-chat-bg {
+  position: relative;
+  /* Hình nền bệnh viện 199 thực tế */
+  background-image: linear-gradient(rgba(241, 245, 249, 0.8), rgba(241, 245, 249, 0.8)), 
+                    url('http://suckhoe.thebank.vn/uploads/2021/03/05/thebank_bv_199_bo_cong_an_1614937128.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* Hiệu ứng kính mờ cho Header và Footer */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+/* Watermark lớn ở trung tâm */
+.hospital-watermark-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-image: url('https://benhvien199.vn/uploads/logo/logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+}

@@ -1,0 +1,21 @@
+.hospital-chat-bg {
+  position: relative;
+  background-color: #f8fafc; /* Màu nền xám nhạt */
+}
+
+/* Tạo lớp phủ hình nền bệnh viện ở giữa */
+.hospital-chat-bg::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* Độ rộng hình nền */
+  height: 400px;
+  background-image: url('https://benhvien199.vn/uploads/logo/logo.png'); /* Thay link ảnh BV 199 tại đây */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.1; /* Độ mờ để không làm rối tin nhắn */
+  pointer-events: none;
+}

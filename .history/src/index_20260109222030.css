@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --hospital-50: #f0f7fc;
+  --hospital-100: #dceef9;
+  --hospital-200: #b9def3;
+  --hospital-300: #8fcde9;
+  --hospital-400: #5ab9dd;
+  --hospital-500: #35a4d0;
+  --hospital-600: #2a7bb7;
+  --hospital-700: #1e5b8d;
+  --hospital-800: #0d4a73;
+  --hospital-900: #081f2e;
+}
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+html,
+body {
+  @apply h-full w-full;
+}
+
+body {
+  @apply overflow-hidden;
+}
+
+#root {
+  @apply h-screen w-screen;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(13, 74, 115, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(13, 74, 115, 0.5);
+}
+
+/* Custom animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+.animate-in {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.slide-in-from-bottom-2 {
+  --tw-enter-translate-y: 8px;
+}
